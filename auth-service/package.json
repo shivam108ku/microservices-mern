@@ -1,0 +1,58 @@
+{
+    "name": "majorp2",
+    "version": "1.0.0",
+    "description": "The Pizza App",
+    "homepage": "https://github.com/shivam108ku/Pizza#readme",
+    "bugs": {
+        "url": "https://github.com/shivam108ku/Pizza/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/shivam108ku/Pizza.git"
+    },
+    "license": "ISC",
+    "author": "Shivam K <shivam108ku@gmail.com>",
+    "type": "commonjs",
+    "main": "index.js",
+    "scripts": {
+        "dev": "nodemon --legacy-watch src/server.ts",
+        "docker:dev": "docker run --rm -it -v \"%cd%:/usr/src/app\" -v \"/usr/src/app/node_modules\" --env-file \"%cd%\\.env\" -p 5501:5501 -e NODE_ENV=development auth-service:dev",
+        "format:fix": "prettier . --write",
+        "format:check": "prettier . --check",
+        "lint:check": "eslint . --check",
+        "lint:fix": "eslint . --fix",
+        "test": "jest --watch --runInBand",
+        "prepare": "husky"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.30.1",
+        "@types/express": "^5.0.3",
+        "@types/http-errors": "^2.0.5",
+        "@types/jest": "^30.0.0",
+        "@types/node": "^24.0.10",
+        "@types/supertest": "^6.0.3",
+        "@types/winston": "^2.4.4",
+        "eslint": "^9.30.1",
+        "husky": "^9.1.7",
+        "lint-staged": "^16.1.2",
+        "nodemon": "^3.1.10",
+        "prettier": "3.6.2",
+        "supertest": "^7.1.1",
+        "ts-jest": "^29.4.0",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.8.3",
+        "typescript-eslint": "^8.35.1"
+    },
+    "lint-staged": {
+        "*.ts": [
+            "npm run format:fix",
+            "npm run lint:fix"
+        ]
+    },
+    "dependencies": {
+        "dotenv": "^17.0.1",
+        "express": "^5.1.0",
+        "http-errors": "^2.0.0",
+        "winston": "^3.17.0"
+    }
+}
