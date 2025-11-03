@@ -1,7 +1,7 @@
 {
     "name": "majorp2",
     "version": "1.0.0",
-    "description": "The Pizza App",
+    "description": "auth-service",
     "homepage": "https://github.com/shivam108ku/Pizza#readme",
     "bugs": {
         "url": "https://github.com/shivam108ku/Pizza/issues"
