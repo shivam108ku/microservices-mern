@@ -11,7 +11,7 @@ describe('POST /auth/register', () => {
             // Arrange
             const userData = {
                 firstName: 'Shivam',
-                lstName: 'K',
+                lstName: 'Kumar',
                 email: 'shivam@gmail.com',
                 password: 'secret',
             };
@@ -23,14 +23,14 @@ describe('POST /auth/register', () => {
             expect(response.statusCode).toBe(201);
         });
 
-        it('should return valis json repsosne', async () => {
+        it('should return valid json repsosne', async () => {
             // AAA
 
             // Arrange
             const userData = {
                 firstName: 'Shivam',
-                lstName: 'K',
-                email: 'shivamn@gmail.com',
+                lstName: 'Kumar',
+                email: 'shivam@gmail.com',
                 password: 'secret',
             };
             // Act
