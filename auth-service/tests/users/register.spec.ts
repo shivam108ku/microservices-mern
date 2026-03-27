@@ -12,7 +12,7 @@ describe('POST /auth/register', () => {
             const userData = {
                 firstName: 'Shivam',
                 lstName: 'K',
-                email: 'shivamn@gmail.com',
+                email: 'shivam@gmail.com',
                 password: 'secret',
             };
             // Act
