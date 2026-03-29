@@ -8,7 +8,7 @@ export const prisma = null;
 // Database connection function
 export const connectDatabase = async () => {
   try {
-    logger.info('⚠️ Database connection temporarily disabled - please generate Prisma client first');
+    logger.info('Database connection temporarily disabled - please generate Prisma client first');
     logger.info('Run: npx prisma generate && npx prisma migrate dev --name init');
   } catch (error) {
     logger.error('❌ Database connection failed:', error);
