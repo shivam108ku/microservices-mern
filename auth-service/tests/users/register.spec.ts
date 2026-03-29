@@ -42,6 +42,24 @@ describe('POST /auth/register', () => {
                 (response.headers as Record<string, string>)['content-type'],
             ).toEqual(expect.stringContaining('json'));
         });
+
+        it("Should persist the user in the DB", async ()=>{
+             // Arrange
+            const userData = {
+                firstName: 'Shivam',
+                lstName: 'Kumar',
+                email: 'shivam@gmail.com',
+                password: 'secret',
+            };
+            // Act
+                await request(app)
+                .post('/auth/register')
+                .send(userData);
+            // Assert
+            // expect(
+            //     (response.headers as Record<string, string>)['content-type'],
+            // ).toEqual(expect.stringContaining('json'));
+        })
     });
 
     describe('Felds are missing', () => {});
