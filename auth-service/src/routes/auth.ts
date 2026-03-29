@@ -4,6 +4,12 @@ import { AuthController } from '../controllers/AuthController';
 const router = express.Router();
 const authController = new AuthController();
 
-router.post('/register', (req, res) => authController.register(req, res));
+router.post('/register', async (req, res, next) => {
+    try {
+        await authController.register(req, res);
+    } catch (error) {
+        next(error);
+    }
+});
 
 export default router;

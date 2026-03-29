@@ -6,6 +6,9 @@ import { NextFunction } from 'connect';
 
 const app = express();
 
+// Middleware for parsing JSON
+app.use(express.json());
+
 app.get('/', (req, res) => {
     res.send('Welcome Shivam');
 });
